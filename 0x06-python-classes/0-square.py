@@ -3,8 +3,9 @@
 no module imported
 """
 
+
 class Square:
     """
-    an empty class Square that defines a square
+    An empty class Square that defines a square
     """
     pass
