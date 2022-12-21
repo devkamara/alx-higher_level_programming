@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """
-no module imported
+no module
 """
 
 
 class Square:
     """
-    class that generate new instances of square
+    class that generates a new instance of square
     """
     def __init__(self, size=0):
         """
@@ -15,11 +15,25 @@ class Square:
         Args:
             size (int): The size of the new square
         """
-        if not isinstance(size, int):
+        self.size = size
+
+    @property
+    def size(self):
+        """
+        method that helps retrieve new instance
+        """
+        return self.__size
+    
+    @size.setter
+    def size(self, value):
+        """
+        method that helps set the new instance
+        """
+        if not isinstance(value, int):
             raise TypeError("size must be an integer")
-        if size < 0:
+        if value < 0:
             raise ValueError("size must be >= 0")
-        self.__size = size
+        self.__size = value
 
     def area(self):
         """
