@@ -3,14 +3,14 @@
 
 
 class Rectangle:
-    """Represent a rectangle."""
+    """Represents a rectangle."""
 
     def __init__(self, width=0, height=0):
         """Initialize a new Rectangle.
 
         Args:
             width (int): The width of the new rectangle.
-            height (int): THe height of the new rectangle.
+            height (int): The height of the new rectangle.
         """
         self.width = width
         self.height = height
@@ -42,7 +42,7 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """Return the area of the Rectangle"""
+        """Return the area of the Rectangle."""
         return (self.__width * self.__height)
 
     def perimeter(self):
@@ -63,3 +63,17 @@ class Rectangle:
             if i != self.__height - 1:
                 r.append("\n")
         return ("".join(r))
+
+    def __repr__(self):
+        """
+        str represantation of the Rectangle
+        """
+        r = "Rectangle(" + str(self.__width)
+        r += ", " + str(self.__height) + ")"
+        return (r)
+
+    def __del__(self):
+        """
+        print a message for every deletion
+        """
+        print("Bye rectangle...")
