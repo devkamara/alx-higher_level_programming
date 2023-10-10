@@ -1,2 +1,0 @@
-Javascript Warm Up
-
